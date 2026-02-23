@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DnevnaDozaDebilizma retro terminal landing page" />
+  <title>DnevnaDozaDebilizma | Terminal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--
+    README
+    ======
+    Run:
+      - Open this folder.
+      - Double-click index.html (or serve with any static server).
+
+    Customize:
+      - Edit command behavior in app.js (COMMAND_HANDLERS + content constants).
+      - Edit colors/themes in styles.css (CSS variables under :root and [data-theme]).
+      - Edit banner/system info in index.html (terminal__banner + terminal__meta blocks).
+  -->
+
+  <main class="page-shell" aria-label="DnevnaDozaDebilizma terminal page">
+    <section class="terminal" aria-label="Interactive terminal">
+      <header class="terminal__chrome" aria-hidden="true">
+        <span class="chrome-dot chrome-dot--red"></span>
+        <span class="chrome-dot chrome-dot--yellow"></span>
+        <span class="chrome-dot chrome-dot--green"></span>
+        <span class="terminal__title">ddd://terminal</span>
+      </header>
+
+      <div class="terminal__screen" id="terminalScreen">
+        <pre class="terminal__banner" id="asciiBanner">
+██████╗ ███╗   ██╗███████╗██╗   ██╗███╗   ██╗ █████╗ ██████╗  ██████╗ ███████╗ █████╗ 
+██╔══██╗████╗  ██║██╔════╝██║   ██║████╗  ██║██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗
+██║  ██║██╔██╗ ██║█████╗  ██║   ██║██╔██╗ ██║███████║██║  ██║██║   ██║███████╗███████║
+██║  ██║██║╚██╗██║██╔══╝  ╚██╗ ██╔╝██║╚██╗██║██╔══██║██║  ██║██║   ██║╚════██║██╔══██║
+██████╔╝██║ ╚████║███████╗ ╚████╔╝ ██║ ╚████║██║  ██║██████╔╝╚██████╔╝███████║██║  ██║
+╚═════╝ ╚═╝  ╚═══╝╚══════╝  ╚═══╝  ╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝
+██████╗  ██████╗ ███████╗██████╗ ██╗██╗     ██╗███████╗███╗   ███╗ █████╗
+██╔══██╗██╔════╝ ██╔════╝██╔══██╗██║██║     ██║╚══███╔╝████╗ ████║██╔══██╗
+██║  ██║██║  ███╗█████╗  ██████╔╝██║██║     ██║  ███╔╝ ██╔████╔██║███████║
+██║  ██║██║   ██║██╔══╝  ██╔══██╗██║██║     ██║ ███╔╝  ██║╚██╔╝██║██╔══██║
+██████╔╝╚██████╔╝███████╗██████╔╝██║███████╗██║███████╗██║ ╚═╝ ██║██║  ██║
+╚═════╝  ╚═════╝ ╚══════╝╚═════╝ ╚═╝╚══════╝╚═╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝
+        </pre>
+
+        <div class="terminal__meta" aria-label="System info">
+          <p><span class="meta-key">Channel:</span> DnevnaDozaDebilizma</p>
+          <p><span class="meta-key">Subscribers:</span> 62,000</p>
+          <p><span class="meta-key">Total Views:</span> 1,000,000+</p>
+          <p><span class="meta-key">Content:</span> Balkan viral shorts, comedy, shock humor, cars &amp; random chaos</p>
+          <p><span class="meta-key">Status:</span> <span class="status-online">ONLINE</span></p>
+        </div>
+
+        <div class="terminal__output" id="output" role="log" aria-live="polite" aria-atomic="false"></div>
+
+        <form class="terminal__prompt" id="promptForm" autocomplete="off">
+          <label class="prompt-label" for="commandInput">ddd@terminal:~$</label>
+          <input
+            id="commandInput"
+            class="prompt-input"
+            type="text"
+            name="command"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="Terminal command input"
+          />
+          <span class="cursor" aria-hidden="true"></span>
+        </form>
+      </div>
+    </section>
+
+    <noscript>
+      <section class="noscript-box" aria-label="Static view">
+        <p>JavaScript is disabled. Interactive terminal commands are unavailable.</p>
+        <p>Use JavaScript-enabled mode to run commands like <strong>help</strong>, <strong>about</strong>, and <strong>theme</strong>.</p>
+      </section>
+    </noscript>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
